@@ -1,0 +1,56 @@
+
+
+get http://localhost:3000/todos/?status=TO%20DO
+###
+get http://localhost:3000/todos/?priority=HIGH
+
+###
+get http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+get http://localhost:3000/todos/?search_q=Play
+
+###
+
+get http://localhost:3000/todos/1
+
+###
+
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 11,
+  "todo": "React js completed",
+  "priority": "HIGH",
+  "status": "DONE"
+}
+
+
+###
+
+put http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{ "status": "DONE" }
+
+###
+
+put http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{ "priority": "HIGH" }
+
+###
+
+put http://localhost:3000/todos/1/
+Content-Type: application/json
+
+{ "todo": "Some task" }
+
+###
+
+
+
+delete http://localhost:3000/todos/11/
